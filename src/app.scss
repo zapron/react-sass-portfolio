@@ -1,0 +1,22 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory; //This allows the scroll to snap in y axis  when in between divs.
+    scrollbar-width: none;//firefox no scroll
+    &::-webkit-scrollbar{
+      display:none;//for rest of browser no scroll
+    }
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;// This will always snap the divs to go to start 
+    }
+  }
+}
